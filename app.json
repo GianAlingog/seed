@@ -15,26 +15,36 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gianqalingog.seed"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gianqalingog.seed"
     },
     "web": {
       "favicon": "./assets/icons/favicon.png"
     },
     "plugins": [
       [
-        "expo-font", {
+        "expo-font",
+        {
           "fonts": [
-            "./assets/fonts/LeagueSpartan-VariableFont_wght.ttf",
-            "./assets/fonts/LibreFranklin-VariableFont_wght.ttf"
+            // "./assets/fonts/LeagueSpartan-VariableFont_wght.ttf",
+            // "./assets/fonts/LibreFranklin-VariableFont_wght.ttf",
+            "./assets/fonts/LeagueSpartan-Medium.ttf",
+            "./assets/fonts/LibreFranklin-Light.ttf"
           ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d42d5092-d076-49f6-84fe-e271332bc215"
+      }
+    }
   }
 }

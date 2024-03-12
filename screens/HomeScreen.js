@@ -1,9 +1,16 @@
 import { View, Text, StyleSheet } from "react-native";
 
+import ModuleSelect from "../components/modules/ModuleSelect";
+import Label from "../components/Label";
+import FillerBox from "../components/FillerBox";
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
+      <FillerBox b="#f2f2f2" h={20} />
+      <Label label="Modules" />
+      <FillerBox b="#f2f2f2" h={20} />
+      <ModuleSelect />
     </View>
   );
 }
@@ -11,8 +18,9 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
+    paddingHorizontal: 20,
   },
   text: {
     fontSize: 24,
