@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { useFonts } from "expo-font";
+import FillerBox from "../FillerBox";
 
 export default function Module() {
   // const [ fontsLoaded ] = useFonts({
@@ -9,8 +9,9 @@ export default function Module() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Name</Text>
-      <Text style={styles.description}>Description</Text>
+      <Text style={styles.label}>Module 5</Text>
+      <FillerBox h={5} b="#F7F8F8"/>
+      <Text style={styles.description}>Intro to Investing</Text>
     </View>
   );
 }
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     width: "auto",
     backgroundColor: "#F7F8F8",
     flex: 7,
-
+    paddingHorizontal: 20,
     justifyContent: "center",
   },
   label: {

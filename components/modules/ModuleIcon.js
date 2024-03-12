@@ -5,7 +5,7 @@ export default function ModuleIcon() {
     <View style={styles.container}>
       <Image
         style={styles.icon}
-        source={require("./../../assets/icons/seed.png")}
+        source={require("./../../assets/icons/invest.png")}
       />
     </View>
   );
@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
     flex: 2,
     alignItems: "center",
     justifyContent: "center",
+    paddingLeft: 10,
   },
   icon: {
-    // width: 65, // Consider not setting this absolute
     width: "100%", 
     height: "100%",
+    objectFit: "contain"
   },
 });
