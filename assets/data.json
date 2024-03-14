@@ -1,9 +1,8 @@
 [
  {
-  "id": 0,
   "name": "Module 5",
   "description": "Intro to Investing",
-  "iconPath": "",
+  "iconPath": "assets/icons/invest.png",
   "levels": [
     {
       "name": "Intro to Investing",
@@ -16,7 +15,7 @@
         {
           "name": "Historical Overview",
           "content": ""
-        },
+        },  
         {
           "name": "Why is Investing Important?",
           "content": ""

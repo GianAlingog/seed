@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default function LevelSelectScreen() {
+export default function LevelSelectScreen({ route }) {
+  const { levels } = route.params;
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Level Select</Text>

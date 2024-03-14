@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import FillerBox from "../FillerBox";
 
-export default function Module() {
+export default function Module({ label, description }) {
   // const [ fontsLoaded ] = useFonts({
   //   'LeagueSpartan': require("./../../assets/fonts/LeagueSpartan-Medium.ttf"),
   //   'LibreFranklin': require("./../../assets/fonts/LibreFranklin-Light.ttf")
@@ -9,9 +9,9 @@ export default function Module() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Module 5</Text>
+      <Text style={styles.label}>{label}</Text>
       <FillerBox h={5} b="#F7F8F8"/>
-      <Text style={styles.description}>Intro to Investing</Text>
+      <Text style={styles.description}>{description}</Text>
     </View>
   );
 }

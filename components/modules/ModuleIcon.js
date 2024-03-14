@@ -1,10 +1,15 @@
 import { StyleSheet, Image, View } from "react-native";
 
-export default function ModuleIcon() {
+function loadImage(path) {
+  return { uri: path }; 
+}
+
+export default function ModuleIcon({ iconPath }) {
   return (
     <View style={styles.container}>
       <Image
         style={styles.icon}
+        // source={{uri: iconPath}}
         source={require("./../../assets/icons/invest.png")}
       />
     </View>
@@ -19,8 +24,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   icon: {
-    width: "100%", 
-    height: "100%",
+    width: 50, 
+    height: 50,
     objectFit: "contain"
   },
 });

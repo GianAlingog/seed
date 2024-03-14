@@ -1,17 +1,39 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, FlatList } from "react-native";
 
 import ModuleSelect from "../components/modules/ModuleSelect";
 import Label from "../components/Label";
 import FillerBox from "../components/FillerBox";
 
+import moduleList from "../assets/data.json";
+
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <FillerBox b="#f2f2f2" h={20} />
+    <SafeAreaView style={styles.container}>
+      <FillerBox h={20} />
       <Label label="Modules" />
-      <FillerBox b="#f2f2f2" h={20} />
-      <ModuleSelect changeScreen={() => navigation.navigate("Levels")}/>
-    </View>
+      <FillerBox h={20} />
+
+      <FlatList
+        contentContainerStyle={{
+          paddingBottom: 20
+        }}
+        data={moduleList}
+        renderItem={({ item }) => {
+          return (
+            <ModuleSelect
+              module={item}
+              changeScreen={() => navigation.navigate("Levels", {
+                levels: item.levels
+              })}
+            />
+          );
+        }}
+        ItemSeparatorComponent={
+          <FillerBox h={20} />
+        }
+      />
+
+    </SafeAreaView>
   );
 }
 
