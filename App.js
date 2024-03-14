@@ -20,6 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="Home"
         screenOptions={{
           headerTitle: (props) => <HeaderLogo {...props} />,
           headerTitleAlign: "center",

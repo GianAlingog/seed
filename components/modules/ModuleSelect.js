@@ -5,14 +5,14 @@ import ModuleIcon from "./ModuleIcon"
 import ModuleLabel from "./ModuleLabel";
 import ModuleButton from "./ModuleButton";
 
-export default function ModuleSelect() {
+export default function ModuleSelect({ changeScreen }) {
   return (
     <Shadow offset={[0, 10]} startColor="#1D161712" stretch>
       <View style={styles.container}>
         <Image style={styles.icon}/>
         <ModuleIcon />
         <ModuleLabel />
-        <ModuleButton />
+        <ModuleButton press={changeScreen}/>
       </View> 
     </Shadow>
   );

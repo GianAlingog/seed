@@ -4,13 +4,13 @@ import ModuleSelect from "../components/modules/ModuleSelect";
 import Label from "../components/Label";
 import FillerBox from "../components/FillerBox";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <FillerBox b="#f2f2f2" h={20} />
       <Label label="Modules" />
       <FillerBox b="#f2f2f2" h={20} />
-      <ModuleSelect />
+      <ModuleSelect changeScreen={() => navigation.navigate("Levels")}/>
     </View>
   );
 }

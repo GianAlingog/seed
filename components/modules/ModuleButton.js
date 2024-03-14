@@ -1,12 +1,14 @@
-import { StyleSheet, Image, View } from "react-native";
+import { StyleSheet, Image, View, Pressable } from "react-native";
 
-export default function ModuleButton() {
+export default function ModuleButton({ press }) {
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.icon}
-        source={require("./../../assets/icons/arrow.png")}
-      />
+      <Pressable style={styles.pressable} onPress={press}>
+        <Image
+          style={styles.icon}
+          source={require("./../../assets/icons/arrow.png")}
+        />
+      </Pressable>
     </View>
   );
 }
@@ -18,9 +20,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingRight: 10,
   },
-  icon: {
-    width: "100%", 
+  pressable: {
+    width: "100%",
     height: "100%",
-    objectFit: "contain"
+  },
+  icon: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
   },
 });
