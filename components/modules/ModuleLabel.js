@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   container: {
     height: "auto",
     width: "auto",
-    backgroundColor: "#F7F8F8",
+    // backgroundColor: "#F7F8F8",
     flex: 7,
     paddingHorizontal: 20,
     justifyContent: "center",

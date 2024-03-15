@@ -15,24 +15,23 @@ export default function HomeScreen({ navigation }) {
 
       <FlatList
         contentContainerStyle={{
-          paddingBottom: 20
+          paddingBottom: 20,
         }}
         data={moduleList}
         renderItem={({ item }) => {
           return (
             <ModuleSelect
               module={item}
-              changeScreen={() => navigation.navigate("Levels", {
-                levels: item.levels
-              })}
+              changeScreen={() =>
+                navigation.navigate("Levels", {
+                  levels: item.levels,
+                })
+              }
             />
           );
         }}
-        ItemSeparatorComponent={
-          <FillerBox h={20} />
-        }
+        ItemSeparatorComponent={<FillerBox h={20} />}
       />
-
     </SafeAreaView>
   );
 }
