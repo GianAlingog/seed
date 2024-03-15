@@ -1,8 +1,10 @@
-import { SafeAreaView, View, Text, StyleSheet } from "react-native";
+import { SafeAreaView, View, Text, StyleSheet, FlatList } from "react-native";
 
+import LevelSelect from "../components/levels/LevelSelect";
+import Label from "../components/Label";
 import FillerBox from "../components/FillerBox";
 
-export default function LevelSelectScreen({ route }) {
+export default function LevelSelectScreen({ navigation, route }) {
   const { levels } = route.params;
   console.log(levels);
 
@@ -19,8 +21,8 @@ export default function LevelSelectScreen({ route }) {
         data={levels}
         renderItem={({ item }) => {
           return (
-            <ModuleSelect
-              module={item}
+            <LevelSelect
+              level={item}
               changeScreen={() => navigation.navigate("Lesson")}
             />
           );

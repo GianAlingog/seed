@@ -7,7 +7,7 @@ import ModuleButton from "./ModuleButton";
 
 export default function ModuleSelect({ module, changeScreen }) {
   return (
-    <Shadow distance={3} offset={[0, 4]} startColor="#43161712" stretch>
+    <Shadow distance={3} offset={[0, 4]} startColor="#1D161712" stretch>
       <View style={styles.container}>
         <ModuleIcon iconPath={module.iconPath} />
         <ModuleLabel label={module.name} description={module.description} />

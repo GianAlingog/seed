@@ -110,7 +110,7 @@ export default function App() {
           name="Lesson"
           component={LessonScreen}
           options={{
-            headerShown: false,
+            title: "filler title"
           }}
         />
       </Stack.Navigator>

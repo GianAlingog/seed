@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Lesson() {
+export default function Lesson({ lessons }) {
   return (
     <View>
       <Text>Lesson</Text>

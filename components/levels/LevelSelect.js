@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import LevelIcon from "./LevelIcon";
+import LevelLabel from "./LevelLabel";
+
 export default function LevelSelect({ level, changeScreen }) {
   return (
-    <View>
+    <View style={styles.container}>
       <LevelIcon iconPath={level.iconPath} press={changeScreen} />
       <LevelLabel label={level.name} />
     </View>
@@ -10,12 +13,14 @@ export default function LevelSelect({ level, changeScreen }) {
 }
 
 const styles = StyleSheet.create({
-  height: 200,
-  width: 200,
-  backgroundColor: "",
-  borderRadius: 100,
-  // padding: 10,
+  container: {
+    height: 150,
+    width: "100%",
+    backgroundColor: "",
+    borderRadius: 100,
+    // padding: 10,
 
-  // alignItems: "center",
-  // justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  }
 });

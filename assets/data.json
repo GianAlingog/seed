@@ -6,7 +6,7 @@
   "levels": [
     {
       "name": "Intro to Investing",
-      "iconPath": "",
+      "iconPath": "assets/icons/stock-market.png",
       "lessons": [
         {
           "name": "What is Investing?",
