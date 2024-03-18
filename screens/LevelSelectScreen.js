@@ -6,7 +6,6 @@ import FillerBox from "../components/FillerBox";
 
 export default function LevelSelectScreen({ navigation, route }) {
   const { levels } = route.params;
-  console.log(levels);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -23,7 +22,11 @@ export default function LevelSelectScreen({ navigation, route }) {
           return (
             <LevelSelect
               level={item}
-              changeScreen={() => navigation.navigate("Lesson")}
+              changeScreen={() =>
+                navigation.navigate("Lesson", {
+                  lessons: item.lessons,
+                })
+              }
             />
           );
         }}
