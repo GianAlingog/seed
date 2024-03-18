@@ -4,12 +4,12 @@
     "slug": "seed",
     "version": "0.1.1",
     "orientation": "portrait",
-    "icon": "./assets/icons/icon.png",
+    "icon": "./assets/icons/seed.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/icons/splash.png",
+      "image": "./assets/icons/seed.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#C4DCFF"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,8 +20,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icons/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icons/seed.png",
+        "backgroundColor": "#C4DCFF"
       },
       "package": "com.gianqalingog.seed"
     },

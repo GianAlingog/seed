@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeScreen from "./screens/HomeScreen";
 import LevelSelectScreen from "./screens/LevelSelectScreen";
-import FillerBox from "./components/FillerBox"
+import FillerBox from "./components/FillerBox";
 import LessonScreen from "./screens/LessonScreen";
 
 const Stack = createNativeStackNavigator();
@@ -43,45 +43,44 @@ function StatHeaderLogo() {
           style={{ width: 30, height: 30 }}
           source={require("./assets/icons/credits.png")}
         />
-        <FillerBox w={5}/>
+        <FillerBox w={5} />
         <Text>{testData.credits}</Text>
       </View>
 
-      <FillerBox w={5}/>
+      <FillerBox w={5} />
 
       <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
         <Image
           style={{ width: 30, height: 30 }}
           source={require("./assets/icons/streak.png")}
         />
-        <FillerBox w={5}/>
+        <FillerBox w={5} />
         <Text>{testData.streak}</Text>
       </View>
 
-      <FillerBox w={5}/>
+      <FillerBox w={5} />
 
       <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
         <Image
           style={{ width: 30, height: 30 }}
           source={require("./assets/icons/lives.png")}
         />
-        <FillerBox w={5}/>
+        <FillerBox w={5} />
         <Text>{testData.lives}</Text>
       </View>
 
-      <FillerBox w={5}/>
+      <FillerBox w={5} />
 
       <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
         <Image
           style={{ width: 30, height: 30 }}
           source={require("./assets/icons/level.png")}
         />
-        <FillerBox w={5}/>
+        <FillerBox w={5} />
         <Text>{testData.xp}</Text>
       </View>
 
-
-      <FillerBox w={50}/>
+      <FillerBox w={50} />
     </View>
   );
 }
@@ -110,7 +109,8 @@ export default function App() {
           name="Lesson"
           component={LessonScreen}
           options={{
-            title: "filler title"
+            headerTitle: () => <StatHeaderLogo />,
+            headerTitleAlign: "center",
           }}
         />
       </Stack.Navigator>
