@@ -6,6 +6,7 @@ import Label from "../components/Label";
 import LessonCard from "../components/lessons/LessonCard";
 import LessonTapHandler from "../components/lessons/LessonTapHandler";
 
+
 export default function LessonScreen({ navigation, route }) {
   const { lessons } = route.params;
   const [index, setIndex] = useState(0);
@@ -58,6 +59,6 @@ const styles = StyleSheet.create({
     flex: 1,
     // alignItems: "center",
     // justifyContent: "center",
-    paddingHorizontal: 20,
+    marginHorizontal: 20,
   },
 });

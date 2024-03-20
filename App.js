@@ -1,4 +1,4 @@
-import { Image, View, Text } from "react-native";
+import { Image, View, Text, AsyncStorage } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -9,8 +9,7 @@ import LessonScreen from "./screens/LessonScreen";
 
 const Stack = createNativeStackNavigator();
 
-// Re-implement stats
-const testData = {
+const defaultData = {
   credits: 0,
   streak: 0,
   lives: 5,
@@ -28,7 +27,7 @@ function HomeHeaderLogo() {
 }
 
 // Use FlatList instead
-function StatHeaderLogo() {
+function StatHeaderLogo({ data }) {
   return (
     <View
       style={{
@@ -44,7 +43,7 @@ function StatHeaderLogo() {
           source={require("./assets/icons/credits.png")}
         />
         <FillerBox w={5} />
-        <Text>{testData.credits}</Text>
+        <Text>{data.credits}</Text>
       </View>
 
       <FillerBox w={5} />
@@ -55,7 +54,7 @@ function StatHeaderLogo() {
           source={require("./assets/icons/streak.png")}
         />
         <FillerBox w={5} />
-        <Text>{testData.streak}</Text>
+        <Text>{data.streak}</Text>
       </View>
 
       <FillerBox w={5} />
@@ -66,7 +65,7 @@ function StatHeaderLogo() {
           source={require("./assets/icons/lives.png")}
         />
         <FillerBox w={5} />
-        <Text>{testData.lives}</Text>
+        <Text>{data.lives}</Text>
       </View>
 
       <FillerBox w={5} />
@@ -77,7 +76,7 @@ function StatHeaderLogo() {
           source={require("./assets/icons/level.png")}
         />
         <FillerBox w={5} />
-        <Text>{testData.xp}</Text>
+        <Text>{data.xp}</Text>
       </View>
 
       <FillerBox w={50} />
@@ -101,7 +100,7 @@ export default function App() {
           name="Levels"
           component={LevelSelectScreen}
           options={{
-            headerTitle: () => <StatHeaderLogo />,
+            headerTitle: () => <StatHeaderLogo data={defaultData} />,
             headerTitleAlign: "center",
           }}
         />
@@ -109,7 +108,7 @@ export default function App() {
           name="Lesson"
           component={LessonScreen}
           options={{
-            headerTitle: () => <StatHeaderLogo />,
+            headerTitle: () => <StatHeaderLogo data={defaultData} />,
             headerTitleAlign: "center",
           }}
         />
