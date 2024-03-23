@@ -10,7 +10,7 @@ const defaultData = {
 export function updateData(key, value) {
   let data = Number(getData(key));
   data += value;
-  saveData(key, value);
+  saveData(key, data);
 }
 
 export function saveData(key, data) {

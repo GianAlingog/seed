@@ -5,6 +5,7 @@ import FillerBox from "../components/FillerBox";
 import Label from "../components/Label";
 import LessonCard from "../components/lessons/LessonCard";
 import LessonTapHandler from "../components/lessons/LessonTapHandler";
+import { updateData } from "../assets/DataHandler";
 
 
 export default function LessonScreen({ navigation, route }) {
@@ -26,6 +27,8 @@ export default function LessonScreen({ navigation, route }) {
 
   const handleTap = () => {
     if (index == lessons.length - 1) {
+      updateData("credits", 50);
+      updateData("xp", 20);
       navigation.goBack();
     } else if (index < lessons.length - 1) {
       setIndex(index + 1);
