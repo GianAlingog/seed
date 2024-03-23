@@ -16,7 +16,10 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.gianqalingog.seed"
+      "bundleIdentifier": "com.gianqalingog.seed",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -33,13 +36,12 @@
         "expo-font",
         {
           "fonts": [
-            // "./assets/fonts/LeagueSpartan-VariableFont_wght.ttf",
-            // "./assets/fonts/LibreFranklin-VariableFont_wght.ttf",
             "./assets/fonts/LeagueSpartan-Medium.ttf",
             "./assets/fonts/LibreFranklin-Light.ttf"
           ]
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "extra": {
       "eas": {
