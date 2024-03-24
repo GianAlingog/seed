@@ -6,7 +6,7 @@ import LevelLabel from "./LevelLabel";
 export default function LevelSelect({ level, changeScreen }) {
   return (
     <View style={styles.container}>
-      <LevelIcon iconPath={level.iconPath} press={changeScreen} />
+      <LevelIcon iconPath={level.uri} press={changeScreen} />
       <LevelLabel label={level.name} />
     </View>
   );

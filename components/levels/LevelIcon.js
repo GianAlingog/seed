@@ -7,7 +7,7 @@ export default function LevelIcon({ iconPath, press }) {
         <View style={styles.circle}>
           <Image
             style={styles.icon}
-            source={require("./../../assets/icons/stock-market.png")}
+            source={iconPath}
           />
         </View>
       </Pressable>

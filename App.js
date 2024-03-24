@@ -1,4 +1,4 @@
-import { Image, View, Text, AsyncStorage } from "react-native";
+import { Image, View, Text, Pressable } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -10,6 +10,18 @@ import { getData } from "./assets/DataHandler";
 
 const Stack = createNativeStackNavigator();
 
+// Override back button
+function BackIcon() {
+  return (
+    <Pressable onPress={{}}>
+      <Image
+        style={{ width: 40, height: 40 }}
+        source={require("./assets/icons/seed.png")}
+      />
+    </Pressable>
+  )
+}
+
 // Transfer to separate file(s) eventually
 function HomeHeaderLogo() {
   return (
@@ -20,7 +32,8 @@ function HomeHeaderLogo() {
   );
 }
 
-// Use FlatList instead
+// Use FlatList if possible
+// It's not a good idea to continually call getData() here, instead pass the data as props and call it somewhere else
 function StatHeaderLogo() {
   const credits = getData("credits");
   const streak = getData("streak");
@@ -101,6 +114,8 @@ export default function App() {
           options={{
             headerTitle: () => <StatHeaderLogo />,
             headerTitleAlign: "center",
+            headerBackTitleVisible: "false",
+            // headerLeft: () => <BackIcon />,
           }}
         />
         <Stack.Screen
@@ -109,6 +124,8 @@ export default function App() {
           options={{
             headerTitle: () => <StatHeaderLogo />,
             headerTitleAlign: "center",
+            headerBackTitleVisible: "false",
+            // headerLeft: () => <BackIcon />,
           }}
         />
       </Stack.Navigator>

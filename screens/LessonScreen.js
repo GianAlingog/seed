@@ -7,7 +7,6 @@ import LessonCard from "../components/lessons/LessonCard";
 import LessonTapHandler from "../components/lessons/LessonTapHandler";
 import { updateData } from "../assets/DataHandler";
 
-
 export default function LessonScreen({ navigation, route }) {
   const { lessons } = route.params;
   const [index, setIndex] = useState(0);
@@ -36,11 +35,12 @@ export default function LessonScreen({ navigation, route }) {
     console.log(index);
   };
 
-
   return (
     <SafeAreaView style={styles.container}>
       <FillerBox h={20} />
-      <Label label="Lesson" />
+      <View style={{ height: 80 }}>
+        <Label label={lessons[index].name} />
+      </View>
       {/* Replace with progress bar and back button : Implement in Appbar / header */}
       <FillerBox h={20} />
 

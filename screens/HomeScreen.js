@@ -4,7 +4,7 @@ import ModuleSelect from "../components/modules/ModuleSelect";
 import Label from "../components/Label";
 import FillerBox from "../components/FillerBox";
 
-import moduleList from "../assets/data.json";
+import data from "../assets/Data";
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -17,7 +17,7 @@ export default function HomeScreen({ navigation }) {
         contentContainerStyle={{
           paddingBottom: 20,
         }}
-        data={moduleList}
+        data={data}
         renderItem={({ item }) => {
           return (
             <ModuleSelect

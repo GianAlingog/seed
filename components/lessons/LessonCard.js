@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function LessonCard({ lesson }) {
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>
+      {/* <Text style={styles.title}>
         {lesson.name}
-      </Text>
+      </Text> */}
       <Text style={styles.content}>
         {lesson.content}
       </Text>
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     // fontFamily: LIBRE FRANKLIN
     color: "#000000",
-    fontWeight: "500",
+    fontWeight: "400",
   },
 });

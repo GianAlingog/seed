@@ -22,7 +22,6 @@ export function getData(key) {
   if (!data) {
     data = defaultData[key];
     saveData(key, data);
-    console.log("SADASdASD");
   }
   return data;
 }
