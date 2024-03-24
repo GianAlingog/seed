@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
-    fontWeight: "700",
-    color: "#7B6F72",
+    fontWeight: "400",
+    color: "#171717",
     // fontFamily: "LibreFranklin-Light"
   }
 });

@@ -21,6 +21,7 @@ export default function HomeScreen({ navigation }) {
         renderItem={({ item }) => {
           return (
             <ModuleSelect
+              navigation={navigation}
               module={item}
               changeScreen={() =>
                 navigation.navigate("Levels", {

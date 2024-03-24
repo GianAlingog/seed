@@ -50,9 +50,11 @@ export default function LessonScreen({ navigation, route }) {
         <LessonCard lesson={lessons[index]}/>
       </LessonTapHandler> */}
 
-      <Pressable onPress={handleTap}>
-        <LessonCard lesson={lessons[index]} />
-      </Pressable>
+      <View style={{ height: "70%" }}>
+        <Pressable onPress={handleTap}>
+          <LessonCard lesson={lessons[index]} />
+        </Pressable>
+      </View>
     </SafeAreaView>
   );
 }

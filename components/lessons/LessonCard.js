@@ -15,7 +15,7 @@ export default function LessonCard({ lesson }) {
 
 const styles = StyleSheet.create({
   card: {
-    height: "80%",
+    height: "100%",
     width: "auto",
     borderRadius: 16,
     backgroundColor: "#C4DCFF",
