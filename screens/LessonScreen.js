@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, SafeAreaView, Pressable } from "react-native";
 import FillerBox from "../components/FillerBox";
 import Label from "../components/Label";
 import LessonCard from "../components/lessons/LessonCard";
-import LessonTapHandler from "../components/lessons/LessonTapHandler";
 import { updateData } from "../assets/DataHandler";
 
 export default function LessonScreen({ navigation, route }) {

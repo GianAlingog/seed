@@ -5,7 +5,7 @@ import ModuleIcon from "./ModuleIcon";
 import ModuleLabel from "./ModuleLabel";
 import ModuleButton from "./ModuleButton";
 import Submodule from "./Submodule";
-import FillerBox from "../FillerBox"
+import FillerBox from "../FillerBox";
 
 export default function ModuleSelect({ navigation, module, changeScreen }) {
   return (
@@ -16,26 +16,27 @@ export default function ModuleSelect({ navigation, module, changeScreen }) {
           <ModuleLabel label={module.name} description={module.description} />
           <ModuleButton press={changeScreen} />
         </View>
+
         <FlatList
-            contentContainerStyle={{
-              paddingBottom: 5,
-            }}
-            data={module.submodules}
-            renderItem={({ item }) => {
-              return (
-                <Submodule
-                  navigation={navigation}
-                  submodule={item}
-                  changeScreen={() =>
-                    navigation.navigate("Levels", {
-                      levels: item.levels,
-                    })
-                  }
-                />
-              );
-            }}
-            ItemSeparatorComponent={<FillerBox h={10} />}
-          />
+          contentContainerStyle={{
+            paddingBottom: 5,
+          }}
+          data={module.submodules}
+          renderItem={({ item }) => {
+            return (
+              <Submodule
+                navigation={navigation}
+                submodule={item}
+                changeScreen={() =>
+                  navigation.navigate("Levels", {
+                    levels: item.levels,
+                  })
+                }
+              />
+            );
+          }}
+          ItemSeparatorComponent={<FillerBox h={10} />}
+        />
       </View>
     </Shadow>
   );
@@ -57,5 +58,5 @@ const styles = StyleSheet.create({
 
     alignItems: "center",
     justifyContent: "center",
-  }
+  },
 });

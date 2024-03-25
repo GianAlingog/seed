@@ -19,7 +19,7 @@ function BackIcon() {
         source={require("./assets/icons/seed.png")}
       />
     </Pressable>
-  )
+  );
 }
 
 // Transfer to separate file(s) eventually

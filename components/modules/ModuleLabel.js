@@ -10,7 +10,7 @@ export default function Module({ label, description }) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
-      <FillerBox h={5} b="#F7F8F8"/>
+      <FillerBox h={5} b="#F7F8F8" />
       <Text style={styles.description}>{description}</Text>
     </View>
   );
@@ -36,5 +36,5 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "#171717",
     // fontFamily: "LibreFranklin-Light"
-  }
+  },
 });

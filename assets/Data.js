@@ -106,15 +106,27 @@ const data = [
         levels: [
           {
             name: "Refresher: Stock and the Stock Market",
-            uri: "",
+            uri: require("./icons/stock.png"),
             lessons: [
               {
                 name: "What is a Stock?",
-                content: "",
+                content: "Let’s start with a basic refresher. A stock is a type of security that represents an investor’s ownership of a company. Companies issue stocks to generate capital for operating their businesses. Stocks are generally bought and sold on the stock market.",
+              },
+              {
+                name: "What is a Stock?",
+                content: "There are two types of stocks: common and preferred. The primary difference between the two is that only common stocks give voting rights to holders. Voting rights allow investors to help select the Board of Directors and determine any corporate policy decisions.",
               },
               {
                 name: "What is the Stock Market?",
-                content: "",
+                content: "The stock market is an exchange for publicly issued companies to be bought and sold. Stock markets allow for a “free-market economy,” allowing people to trade holdings for capital. ",
+              },
+              {
+                name: "What is the Stock Market?",
+                content: "There are various existing stock markets, with the first one being the London Stock Exchange in 1773. In the U.S., the common stock market is the New York Stock Exchange, regulated by the Securities and Exchange Commission.",
+              },
+              {
+                name: "Conclusion",
+                content: "There are different types of stocks and markets, which we’ll explore in the following lessons. For now, let’s try to answer a couple questions to make sure you’re refreshed.",
               },
             ],
           },

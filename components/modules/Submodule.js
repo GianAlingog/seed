@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, Pressable } from "react-native";
 
 export default function Submodule({ submodule, changeScreen }) {
   return (
-    <Pressable onPress={changeScreen} >
+    <Pressable onPress={changeScreen}>
       <View style={styles.container}>
         <Text style={styles.label}>{submodule.name}</Text>
       </View>
@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
   container: {
     height: 32,
     width: "auto",
-    backgroundColor: "#EBEBEB", // try #F2F2F2 ; original #E8E9EB
+    // try #F2F2F2 ; original #E8E9EB
+    backgroundColor: "#EBEBEB",
     flex: 7,
     paddingHorizontal: 20,
     borderRadius: 16,
