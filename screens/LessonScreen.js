@@ -10,25 +10,36 @@ export default function LessonScreen({ navigation, route }) {
   const { lessons } = route.params;
   const [index, setIndex] = useState(0);
 
+  const getLessonCount = () => {
+    let count = 0;
+    if (lessons != null) {
+      count = lessons.length;
+    }
+    return count;
+  }
+
+  let lessonCount = getLessonCount();
+
   const handleLeftTap = () => {
     if (index > 0) {
       index--;
     }
     console.log(index);
   };
+  
   const handleRightTap = () => {
-    if (index < lessons.length - 1) {
+    if (index < lessonCount - 1) {
       index++;
     }
     console.log(index);
   };
 
   const handleTap = () => {
-    if (index == lessons.length - 1) {
+    if (index == lessonCount - 1) {
       updateData("credits", 50);
       updateData("xp", 20);
       navigation.goBack();
-    } else if (index < lessons.length - 1) {
+    } else if (index < lessonCount - 1) {
       setIndex(index + 1);
     }
     console.log(index);
