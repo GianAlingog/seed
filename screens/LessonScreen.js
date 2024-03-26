@@ -10,15 +10,7 @@ export default function LessonScreen({ navigation, route }) {
   const { lessons } = route.params;
   const [index, setIndex] = useState(0);
 
-  const getLessonCount = () => {
-    let count = 0;
-    if (lessons != null) {
-      count = lessons.length;
-    }
-    return count;
-  }
-
-  let lessonCount = getLessonCount();
+  let lessonCount = lessons?.length;
 
   const handleLeftTap = () => {
     if (index > 0) {
