@@ -32,5 +32,7 @@ const styles = StyleSheet.create({
     // fontFamily: LIBRE FRANKLIN
     color: "#000000",
     fontWeight: "400",
+    letterSpacing: 0.5,
+    lineHeight: 30,
   },
 });

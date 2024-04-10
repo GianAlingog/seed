@@ -14,10 +14,6 @@ const data = [
               "Investing is the act of purchasing assets so that they increase in value over time. Assets can be stocks, bonds, real estate, etc.",
           },
           {
-            name: "Why is Investing Important?",
-            content: "Wealth Building\n\nBeat Inflation\n\nFinancial Security",
-          },
-          {
             name: "Wealth Building",
             content:
               "Investing provides an opportunity to grow wealth over the long term. Individuals can accumulate financial resources and work towards their financial goals.",
@@ -31,11 +27,6 @@ const data = [
             name: "Financial Security",
             content:
               "By having various places where you put your money, investing contributes to your financial security.",
-          },
-          {
-            name: "Why You Should Start Investing Now",
-            content:
-              "The Power of Compounding\n\nRisk Tolerance\n\nLearn by Doing\n\nTake Advantage of Market Ups and Downs",
           },
           {
             name: "The Power of Compounding",
