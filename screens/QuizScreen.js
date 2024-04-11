@@ -7,7 +7,8 @@ import LessonCard from "../components/lessons/LessonCard";
 import { updateData } from "../assets/DataHandler";
 
 export default function QuizScreen({ navigation, route }) {
-  const { questions } = route.params;
+  const { item } = route.params;
+  const questions = item.questions;
   const [index, setIndex] = useState(0);
 
   let questionCount = questions?.length;

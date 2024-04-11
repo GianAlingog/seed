@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native"
 
-export default function Label({ label }) {
+export default function Label({ label, style }) {
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
+      <Text style={[style, styles.label]}>{label}</Text>
     </View>
   );
 }

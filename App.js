@@ -7,6 +7,8 @@ import LevelSelectScreen from "./screens/LevelSelectScreen";
 import FillerBox from "./components/FillerBox";
 import LessonScreen from "./screens/LessonScreen";
 import { getData } from "./assets/DataHandler";
+import EndScreen from "./screens/EndScreen";
+import QuizScreen from "./screens/QuizScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -121,6 +123,26 @@ export default function App() {
         <Stack.Screen
           name="Lesson"
           component={LessonScreen}
+          options={{
+            headerTitle: () => <StatHeaderLogo />,
+            headerTitleAlign: "center",
+            headerBackTitleVisible: "false",
+            // headerLeft: () => <BackIcon />,
+          }}
+        />
+        <Stack.Screen
+          name="EndScreen"
+          component={EndScreen}
+          options={{
+            headerTitle: () => <StatHeaderLogo />,
+            headerTitleAlign: "center",
+            headerBackTitleVisible: "false",
+            // headerLeft: () => <BackIcon />,
+          }}
+        />
+        <Stack.Screen
+          name="Quiz"
+          component={QuizScreen}
           options={{
             headerTitle: () => <StatHeaderLogo />,
             headerTitleAlign: "center",

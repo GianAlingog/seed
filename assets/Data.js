@@ -48,6 +48,13 @@ const data = [
               "Markets go through cycles of ups and downs. Starting to invest now allows you to benefit from those cycles!",
           },
         ],
+        credits: 50,
+        exp: 20,
+        questions: [
+          {
+            question: ""
+          }
+        ],
       },
       {
         name: "Types of Investment (Part 1)",
@@ -89,6 +96,8 @@ const data = [
               "Stock market investing refers to the process of buying/selling stocks or shares of publicly traded companies.",
           },
         ],
+        credits: 50,
+        exp: 20,
       },
     ],
     submodules: [
@@ -120,6 +129,8 @@ const data = [
                 content: "There are different types of stocks and markets, which we’ll explore in the following lessons. For now, let’s try to answer a couple questions to make sure you’re refreshed.",
               },
             ],
+            credits: 50,
+            exp: 20,
           },
         ],
       },

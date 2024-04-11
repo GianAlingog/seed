@@ -24,7 +24,7 @@ export default function LevelSelectScreen({ navigation, route }) {
               level={item}
               changeScreen={() =>
                 navigation.navigate("Lesson", {
-                  lessons: item.lessons,
+                  item: item,
                 })
               }
             />

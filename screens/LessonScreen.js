@@ -7,7 +7,8 @@ import LessonCard from "../components/lessons/LessonCard";
 import { updateData } from "../assets/DataHandler";
 
 export default function LessonScreen({ navigation, route }) {
-  const { lessons } = route.params;
+  const { item } = route.params;
+  const lessons = item.lessons;
   const [index, setIndex] = useState(0);
 
   let lessonCount = lessons?.length;
@@ -18,7 +19,7 @@ export default function LessonScreen({ navigation, route }) {
     }
     console.log(index);
   };
-  
+
   const handleRightTap = () => {
     if (index < lessonCount - 1) {
       index++;
@@ -30,7 +31,9 @@ export default function LessonScreen({ navigation, route }) {
     if (index == lessonCount - 1) {
       updateData("credits", 50);
       updateData("xp", 20);
-      navigation.goBack();
+      navigation.navigate("EndScreen", {
+        item: item,
+      });
     } else if (index < lessonCount - 1) {
       setIndex(index + 1);
     }
