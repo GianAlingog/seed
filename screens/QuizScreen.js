@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView, Pressable } from "react-native";
 
 import FillerBox from "../components/FillerBox";
 import Label from "../components/Label";
-import LessonCard from "../components/lessons/LessonCard";
+import QuizCard from "../components/quizzes/QuizCard";
 import { updateData } from "../assets/DataHandler";
 
 export default function QuizScreen({ navigation, route }) {
@@ -21,7 +21,7 @@ export default function QuizScreen({ navigation, route }) {
     <SafeAreaView style={styles.container}>
       <FillerBox h={20} />
       <View style={{ height: 80 }}>
-        <Label label={questions[index].name} />
+        <Label label={questions[index].question} />
       </View>
     
       <FillerBox h={20} />

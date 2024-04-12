@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   label: {
-    fontSize: 16,
-    fontWeight: "500",
+    fontSize: 14,
+    fontWeight: "400",
     color: "#171717",
     // fontFamily: "LeagueSpartan-Medium"
   },
